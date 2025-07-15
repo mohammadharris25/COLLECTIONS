@@ -1,100 +1,70 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp60
+namespace ConsoleApp62
 {
     internal class Program
     {
         static void Main(string[] args)
         {
 
-
-            Queue<string> queue1 = new Queue<string>();
-            queue1.Enqueue("moin");
-            queue1.Enqueue("ahmad");
-            queue1.Enqueue("basit");
-            queue1.Enqueue("umar");
-            queue1.Enqueue("sahil");
-
-
-            foreach (var name in queue1)
-            {
-                Console.WriteLine(name);
-            }
+            // Dictionary ; ---------- ( key and value present in a pair word and meaning)      
+             // # / hastable table
+             // no sequence and non generic dictinary
+           /*  Hashtable ht = new Hashtable();
+            ht.Add("moin","harris");
+            ht.Add(101,"ahmad");
+            ht.Add("umar",18.6);
+            foreach (DictionaryEntry a in ht ) 
+            { 
             
-            queue1.Enqueue("bilal");
-            Console.WriteLine("_______________");
-            foreach (var name in queue1)
-            {
-                Console.WriteLine(name);
+            
+            Console.WriteLine(a.Key+"---------------"+a.Value);
+
+            
             }
-            queue1.Dequeue();
+            Console.WriteLine("_____________");
+            ht.Add("cr7",123456);
 
-            Console.WriteLine("_______________");
-
-            foreach (var name in queue1)
+            foreach (DictionaryEntry a in ht)
             {
-                Console.WriteLine(name);
+
+
+                Console.WriteLine(a.Key + "---------------" + a.Value);
+
+
             }
-            Console.WriteLine("_______________");
-            Console.WriteLine( queue1.Peek()+" :------peek element");
-            Console.WriteLine("_______________");
-            Console.WriteLine(queue1.Count);
+            ht.Remove("umar");
+            Console.WriteLine("_____________");
+            foreach (DictionaryEntry a in ht)
+            {
 
 
+                Console.WriteLine(a.Key + "---------------" + a.Value);
 
 
-            /*Console.WriteLine("------------------");
+            }
+           
+            SortedList sortedList = new SortedList();
+            // non generic  key and value
+            
+            sortedList.Add(07,"cr7");
+            sortedList.Add( 10, "messi");
+            sortedList.Add(01,"beckham");
+            foreach ( DictionaryEntry item in sortedList)
+            {
+                Console.WriteLine(item.Key +"----------"+ item.Value);
 
-              int a;
-              string x;
-              int b = queue1.Count;
-
-              //Console.WriteLine(queue1.Count);
-
-              for (a = 0; a < b; a++)
-              {
-                  x = queue1.Dequeue();
-                  Console.WriteLine(x + " removed");
-                  //Console.WriteLine(queue1.Count);
-              }
+            }
             */
 
-              Stack<string> stack1 = new Stack<string>();
-              stack1.Push("moin");
-              stack1.Push("ahmad");
-              stack1.Push("basit");
-              stack1.Push("Umar");
-              stack1.Push("sahil");
-              Console.WriteLine("------------------");
-              foreach (var name in stack1) {
-                  Console.WriteLine(name);
-              }
-            Console.WriteLine("------------------");
-            stack1.Pop();
-            foreach (var name in stack1)
-            {
-                Console.WriteLine(name);
-            }
-            Console.WriteLine("------------------");
-            Console.WriteLine( stack1.Peek());
 
 
-              string q;
-              int c = stack1.Count;
 
-              Console.WriteLine(queue1.Count);
-              Console.WriteLine("------------");
-              for (int m = 0; m < c; m++)
-              {
-                  q = stack1.Pop();
-                  Console.WriteLine(q+ " removed");
-                  Console.WriteLine(queue1.Count);
-              }
-            
         }
     }
 }
