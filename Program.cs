@@ -427,6 +427,50 @@ namespace ConsoleApp47
 
              }
              */
+            //GENERICS
+            static void Main(string[] args)
+            {
+                employee<string> tanfeez = new employee<string>("101", "tanfeex");
+                employee<int> moin = new employee<int>(101, 6789);
+                Console.WriteLine(tanfeez.ID);
+                Console.WriteLine(tanfeez.getName());
+                Console.WriteLine(moin.ID);
+                Console.WriteLine(moin.getName());
+            }
+        }
+    }
+
+class employee<T>
+{
+
+    private T id;
+    private T name;
+
+    public employee(T id, T name)
+    {
+        this.id = id;
+        this.name = name;
+
+    }
+
+    public T ID
+    {
+        set { this.id = value; }
+        get { return this.id; }
+
+    }
+
+    public void set_name(T name)
+    {
+        this.name = name;
+
+    }
+    public T getName()
+    {
+        return this.name;
+    }
+
+}
 
 
 
